@@ -1,0 +1,53 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    In <a target="_blank" href="https://watersort.org/">Water Sort game</a> you are given a sequence of flasks. Most of them are filled with mixed liquids of different colors, and some are empty. Your task is to collect liquids of the same color in one flask using empty flasks by pouring a single color portion(s) from one flask to another with this color or to empty one.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort1.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    The sequence of flasks is represented as {% if is_js %}array{% else %}list{% endif %} of strings. All non-empty flasks in a sequence have the same capacity (which may vary from test to test). Colors of liquids are encoded by latin letters from top to bottom (in flasks) and from leftest to rightest flask in order of first appearance (the first color is encoded as <code>"a"</code>, the next distinct color - <code>"b"</code> etc).  Adjacent portions of the same color encoded with repeating letter (<code>"aa", "ccc"</code> etc.).
+</p>
+
+<p style="text-align: justify;">
+    Your mission is to calculate the minimum number of pourings needed to collect every distinct color in one flask.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort2.svg" alt="example" style="max-height: 500px"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+    <strong>Input:</strong> <span translate="repeat">{% if is_js %}Array{% else %}List{% endif %}</span> of strings <span translate="no">(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<p>
+    <strong>Output:</strong> Integer <span translate="no">({% if is_js %}number{% else %}int{% endif %})</span>. 
+</p>
+
+
+<p>
+    <strong>Examples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
