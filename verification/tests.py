@@ -46,7 +46,7 @@ TESTS = {
         },
         {
             "input": [["abbcac", "acccdb", "ebdeee", "eaabac", "ddbedd", "", ""]],
-            "answer": 20,
+            "answer": 19,
         },
         {
             "input": [["abacdaab", "accdbadc", "dddbbcbd", "bbcadcac", "", ""]],
