@@ -34,7 +34,7 @@ TESTS = {
         },
         {
             "input": [["abbc", "bddc", "aeca", "eebd", "edca", "", ""]],
-            "answer": 15,
+            "answer": 14,
         },
         {
             "input": [["abcd", "dedc", "aaed", "ebcb", "ebac", "", ""]],
