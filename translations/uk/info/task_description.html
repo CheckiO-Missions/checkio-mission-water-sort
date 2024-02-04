@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    На сайті <a target="_blank" href="https://watersort.org/">Water Sort game</a> вам надається послідовність колб. Більшість з них заповнено змішаними рідинами різних кольорів, а деякі порожні. Ваше завдання - зібрати рідини одного кольору в одну колбу, використовуючи порожні колби, переливаючи порції одного кольору з однієї колби в іншу, яка стоїть зверху, або в порожню колбу.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort1.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Послідовність колб подається у вигляді масиву {% if is_js %}{% else %} списку{% endif %} рядків. Всі непорожні колби у послідовності мають однакову місткість (яка може змінюватися від тесту до тесту). Кольори рідин кодуються латинськими літерами зверху вниз (у колбах) і від лівої до правої колби у порядку їх появи (перший колір кодується як <code>"a"</code>, наступний чітко виражений колір - <code>"b"</code> і т.д.).  Суміжні частини одного кольору кодуються повторюваною літерою (<code>"aa", "ccc"</code> і т.д.).
+</p>
+
+<p style="text-align: justify;">
+    Ваша задача - обчислити мінімальну кількість наливань, необхідних для того, щоб зібрати всі кольори в одній колбі.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort2.svg" alt="example" style="max-height: 500px"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>Вхідні дані:</strong> {% if is_js %}Масив{% else %}Список{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> рядків <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Вивести:</strong> Ціле число <span>({% if is_js %}number{% else %}int{% endif %})</span>. 
+</p>
+
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Передумова:</strong>
+    <ul>
+    <li><i>загальна_кількість_пробірок &gt;= кількість_кольорів + 1</i></li>
+    </ul>
+</p>
+<p><i>
+    Ця місія є реалізацією наступної <a target="_blank" href="https://play.google.com/store/apps/details?id=water.sort.puzzle.game.color.sorting.free&pcampaignid=web_share">Water Sort Google Play app</a>. Всі тести були зроблені з самого початку роботи програми. Ви можете використовувати додаток, щоб краще зрозуміти місію і легше її розв'язати, як це зробив я під час створення програми.
+</i></p>
