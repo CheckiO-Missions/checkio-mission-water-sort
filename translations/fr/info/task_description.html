@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Sur le site <a target="_blank" href="https://watersort.org/">Water Sort game</a>, vous disposez d'une série de flacons. La plupart d'entre eux sont remplis de liquides mélangés de différentes couleurs, et certains sont vides. Votre tâche consiste à rassembler des liquides de la même couleur dans un flacon en utilisant des flacons vides en versant une ou plusieurs portions d'une seule couleur d'un flacon à un autre flacon contenant cette couleur ou à un flacon vide.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort1.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    La séquence de flacons est représentée sous la forme d'un tableau {% if is_js %}{% else %} liste{% endif %} de chaînes de caractères. Tous les flacons non vides d'une séquence ont la même capacité (qui peut varier d'un test à l'autre). Les couleurs des liquides sont codées par des lettres latines de haut en bas (dans les flacons) et du flacon le plus à gauche au flacon le plus à droite dans l'ordre de leur première apparition (la première couleur est codée comme <code>"a"</code>, la couleur distincte suivante - <code>"b"</code> etc).  Les parties adjacentes de la même couleur sont codées par une lettre répétitive (<code>"aa", "ccc"</code> etc.).
+</p>
+
+<p style="text-align: justify;">
+    Votre mission est de calculer le nombre minimum de versements nécessaires pour collecter toutes les couleurs distinctes dans un seul flacon.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort2.svg" alt="example" style="max-height: 500px"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> {% if is_js %}Tableau{% else %}Liste{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> de chaînes <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Sortie:</strong> Entier <span>({% if is_js %}number{% else %}int{% endif %})</span>. 
+</p>
+
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Condition préalable:</strong>
+    <ul>
+    <li><i>nombre_total_tubes &gt;= nombre_couleurs + 1</i></li>
+    </ul>
+</p>
+<p><i>
+    Cette mission est une implémentation de l'application suivante <a target="_blank" href="https://play.google.com/store/apps/details?id=water.sort.puzzle.game.color.sorting.free&pcampaignid=web_share">Water Sort Google Play app</a>. Tous les tests ont été effectués à partir du début de l'application. Vous pouvez utiliser l'application pour mieux comprendre la mission et la résoudre plus facilement comme je l'ai fait en la créant.
+</i></p>
