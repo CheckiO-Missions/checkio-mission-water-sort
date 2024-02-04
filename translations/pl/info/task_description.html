@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Na stronie <a target="_blank" href="https://watersort.org/">Water Sort game</a> otrzymują Państwo sekwencję kolb. Większość z nich jest wypełniona cieczami o różnych kolorach, a niektóre są puste. Zadanie polega na zebraniu cieczy tego samego koloru w jednej kolbie przy użyciu pustych kolb poprzez przelanie porcji cieczy jednego koloru z jednej kolby do drugiej z tym kolbą na wierzchu lub opróżnienie jednej kolby.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort1.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Sekwencja kolb jest reprezentowana jako tablica {% if is_js %}{% else %} lista{% endif %} ciągów znaków. Wszystkie niepuste kolby w sekwencji mają taką samą pojemność (która może się różnić w zależności od testu). Kolory płynów są kodowane literami łacińskimi od góry do dołu (w kolbach) i od lewej do prawej kolby w kolejności pierwszego pojawienia się (pierwszy kolor jest kodowany jako <code>"a"</code>, następny wyraźny kolor - <code>"b"</code> itd.)  Sąsiednie części tego samego koloru są kodowane powtarzającą się literą (<code>"aa", "ccc"</code> itd.).
+</p>
+
+<p style="text-align: justify;">
+    Państwa zadaniem jest obliczenie minimalnej liczby nalewów potrzebnych do zebrania wszystkich kolorów w jednej kolbie.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort2.svg" alt="example" style="max-height: 500px"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>Dane wejściowe:</strong> {% if is_js %}Tablica{% else %}Lista{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> ciągów znaków <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Dane wyjściowe:</strong> Liczba całkowita <span>({% if is_js %}number{% else %}int{% endif %})</span>. 
+</p>
+
+
+<p>
+    <strong>Przykłady:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Warunek wstępny:</strong>
+    <ul>
+    <li><i>total_number_tubes &gt;= number_colors + 1</i></li>
+    </ul>
+</p>
+<p><i>
+    Ta misja jest implementacją następującego <a target="_blank" href="https://play.google.com/store/apps/details?id=water.sort.puzzle.game.color.sorting.free&pcampaignid=web_share">Water Sort Google Play app</a>. Wszystkie testy zostały wykonane od początku aplikacji. Mogą Państwo skorzystać z aplikacji, aby lepiej zrozumieć misję i łatwiej ją rozwiązać, tak jak ja to zrobiłem podczas jej tworzenia.
+</i></p>
