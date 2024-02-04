@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    <a target="_blank" href="https://watersort.org/">Water Sort game</a> 中会给你一连串烧瓶。其中大部分装满了不同颜色的混合液体，还有一些是空的。您的任务是使用空烧瓶收集烧瓶中相同颜色的液体，方法是从一个烧瓶中倒入单一颜色的液体到另一个烧瓶中，或倒空一个烧瓶。
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort1.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    烧瓶序列用{% if is_js %}数组{% else %}字符串列表{% endif %} 表示。序列中所有非空烧瓶的容量相同（不同测试的容量可能不同）。液体的颜色用拉丁字母编码，从上到下（烧瓶中），从最左到最右，按首次出现的顺序排列（第一种颜色编码为<code>"a"</code> ，下一种不同的颜色 -<code>"b"</code> 等）。  相同颜色的相邻部分用重复字母编码（<code>"aa", "ccc"</code> 等）。
+</p>
+
+<p style="text-align: justify;">
+    您的任务是计算在一个烧瓶中收集每种不同颜色所需的最少倾倒次数。
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}water-sort2.svg" alt="example" style="max-height: 500px"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>输入：</strong> {% if is_js %}数组{% else %}列表{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span>的字符串 <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<p>
+   <strong>输出：</strong>整数 <span>({% if is_js %}number{% else %}int{% endif %})</span>. 
+</p>
+
+
+<p>
+    <strong>示例</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>前提条件：</strong>
+    <ul>
+    <li><i>total_number_tubes &gt;= number_colors + 1</i></li>
+    </ul>
+</p>
+<p><i>
+    本任务是以下<a target="_blank" href="https://play.google.com/store/apps/details?id=water.sort.puzzle.game.color.sorting.free&pcampaignid=web_share">Water Sort Google Play app</a> 的实现。所有测试均从应用程序的开头开始。您可以使用该程序来更好地理解任务，并像我在创建任务时一样更容易地解决它。
+</i></p>
